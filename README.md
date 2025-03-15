@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 卡文达汽车胎压监测系统门户网站 (Kawenda TPMS Portal)
 
-## Getting Started
+这是卡文达汽车胎压监测系统的官方门户网站，使用 Next.js 13+ 构建，提供产品展示、解决方案介绍、技术支持等功能。
 
-First, run the development server:
+This is the official portal website for Kawenda Tire Pressure Monitoring System, built with Next.js 13+, providing product showcase, solution introduction, technical support, and more.
+
+## 技术栈 (Tech Stack)
+
+- **前端框架**: Next.js 13.4+
+- **状态管理**: Zustand 4.4+
+- **国际化**: next-i18next 13.1+
+- **UI组件库**: Headless UI + Tailwind CSS
+- **图表**: Recharts 2.4+
+
+## 功能特点 (Features)
+
+- 响应式设计，适配各种设备
+- 中英文双语支持
+- 产品展示与详情页
+- 解决方案介绍
+- 技术支持与文档中心
+- 实时数据可视化展示
+
+## 开发环境设置 (Development Setup)
+
+### 系统要求 (Requirements)
+
+- Node.js 18+
+- npm 或 yarn 或 pnpm
+
+### 安装步骤 (Installation)
+
+1. 克隆仓库 (Clone the repository)
+
+```bash
+git clone https://github.com/your-username/kawenda-tpms.git
+cd kawenda-tpms
+```
+
+2. 安装依赖 (Install dependencies)
+
+```bash
+npm install
+# 或
+yarn install
+# 或
+pnpm install
+```
+
+3. 启动开发服务器 (Start development server)
 
 ```bash
 npm run dev
-# or
+# 或
 yarn dev
-# or
+# 或
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. 在浏览器中打开 [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 项目结构 (Project Structure)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+kawenda-tpms/
+├── public/             # 静态资源
+├── src/
+│   ├── app/            # Next.js App Router 页面
+│   ├── components/     # 可复用组件
+│   └── store/          # Zustand 状态管理
+├── next.config.ts      # Next.js 配置
+└── tailwind.config.js  # Tailwind CSS 配置
+```
 
-## Learn More
+## 部署 (Deployment)
 
-To learn more about Next.js, take a look at the following resources:
+本项目可以部署到 Vercel、Netlify 或其他支持 Next.js 的平台。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project can be deployed to Vercel, Netlify, or other platforms that support Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# 构建生产版本
+npm run build
+# 或
+yarn build
+# 或
+pnpm build
+```
 
-## Deploy on Vercel
+## 许可证 (License)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE)
