@@ -1,3 +1,4 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: "next/core-web-vitals",
   rules: {
@@ -10,5 +11,11 @@ module.exports = {
     "react/jsx-no-target-blank": "warn",
     "jsx-a11y/alt-text": "warn"
   },
-  ignorePatterns: ["node_modules/", ".next/", "out/", "**/*.d.ts"]
+  ignorePatterns: [
+    "node_modules/", 
+    ".next/", 
+    "out/", 
+    "**/*.d.ts",
+    "src/types/"
+  ]
 }; 
