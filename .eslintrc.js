@@ -1,6 +1,6 @@
-{
-  "extends": "next/core-web-vitals",
-  "rules": {
+module.exports = {
+  extends: "next/core-web-vitals",
+  rules: {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "react/jsx-no-undef": "off",
@@ -10,13 +10,5 @@
     "react/jsx-no-target-blank": "warn",
     "jsx-a11y/alt-text": "warn"
   },
-  "ignorePatterns": ["node_modules/", ".next/", "out/"],
-  "overrides": [
-    {
-      "files": ["*.d.ts"],
-      "rules": {
-        "@typescript-eslint/no-explicit-any": "off"
-      }
-    }
-  ]
-} 
+  ignorePatterns: ["node_modules/", ".next/", "out/", "**/*.d.ts"]
+}; 

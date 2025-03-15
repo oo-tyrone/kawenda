@@ -2,13 +2,14 @@ import { NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-interface ChatData {
-  message: {
-    name: string;
-    email: string;
-    message: string;
-  };
-}
+// 在实际项目中，这个接口会被用于类型检查
+// interface ChatData {
+//   message: {
+//     name: string;
+//     email: string;
+//     message: string;
+//   };
+// }
 
 // 这个函数在实际项目中会被使用，这里仅作为示例
 // export async function saveToDB(data: ChatData) {
