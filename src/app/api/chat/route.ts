@@ -2,7 +2,15 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
-async function saveToDB(data: any) {
+interface ChatData {
+  message: {
+    name: string;
+    email: string;
+    message: string;
+  };
+}
+
+async function saveToDB(data: ChatData) {
   // This is a placeholder for the actual database saving logic
   console.log('Saving to database:', data);
   // In a real implementation, this would connect to your database
