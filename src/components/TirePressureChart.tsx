@@ -14,9 +14,12 @@ import {
 import useAppStore from '@/store/useAppStore';
 
 // Mock data for the chart
-const generateMockData = (days = 7) => {
+const generateMockData = (days = 7, vehicleId = 'demo-vehicle') => {
   const data = [];
   const now = new Date();
+  
+  // 使用vehicleId作为随机种子，使不同车辆有不同的数据模式
+  const seed = vehicleId.charCodeAt(0) / 255;
   
   for (let i = days - 1; i >= 0; i--) {
     const date = new Date(now);
@@ -24,10 +27,10 @@ const generateMockData = (days = 7) => {
     
     data.push({
       date: date.toISOString().split('T')[0],
-      frontLeft: 2.2 + Math.random() * 0.2,
-      frontRight: 2.3 + Math.random() * 0.2,
-      rearLeft: 2.4 + Math.random() * 0.2,
-      rearRight: 2.4 + Math.random() * 0.2,
+      frontLeft: 2.2 + Math.random() * 0.2 + seed * 0.1,
+      frontRight: 2.3 + Math.random() * 0.2 + seed * 0.1,
+      rearLeft: 2.4 + Math.random() * 0.2 + seed * 0.1,
+      rearRight: 2.4 + Math.random() * 0.2 + seed * 0.1,
     });
   }
   
@@ -46,12 +49,12 @@ const TirePressureChart = ({
   const { locale } = useAppStore();
   const [data, setData] = useState(() => {
     const days = timeRange === '7d' ? 7 : timeRange === '30d' ? 30 : 90;
-    return generateMockData(days);
+    return generateMockData(days, vehicleId);
   });
   
   const handleTimeRangeChange = (range: '7d' | '30d' | '90d') => {
     const days = range === '7d' ? 7 : range === '30d' ? 30 : 90;
-    setData(generateMockData(days));
+    setData(generateMockData(days, vehicleId));
   };
   
   return (

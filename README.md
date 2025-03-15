@@ -1,92 +1,78 @@
-# 卡文达汽车胎压监测系统门户网站 (Kawenda TPMS Portal)
+# Kawenda TPMS - 胎压监测系统网站
 
-这是卡文达汽车胎压监测系统的官方门户网站，使用 Next.js 13+ 构建，提供产品展示、解决方案介绍、技术支持等功能。
+这是一个使用Next.js和TypeScript构建的胎压监测系统(TPMS)产品展示网站。该网站展示了卡文达公司的TPMS产品、解决方案和服务。
 
-This is the official portal website for Kawenda Tire Pressure Monitoring System, built with Next.js 13+, providing product showcase, solution introduction, technical support, and more.
+## 功能特点
 
-## 技术栈 (Tech Stack)
-
-- **前端框架**: Next.js 13.4+
-- **状态管理**: Zustand 4.4+
-- **国际化**: next-i18next 13.1+
-- **UI组件库**: Headless UI + Tailwind CSS
-- **图表**: Recharts 2.4+
-
-## 功能特点 (Features)
-
-- 响应式设计，适配各种设备
-- 中英文双语支持
-- 产品展示与详情页
+- 响应式设计，适配各种设备尺寸
+- 多语言支持（中文和英文）
+- 产品展示和详情页面
 - 解决方案介绍
-- 技术支持与文档中心
-- 实时数据可视化展示
+- 胎压数据可视化图表
+- 轮播图组件
+- 联系表单
+- 关于我们页面
 
-## 开发环境设置 (Development Setup)
+## 技术栈
 
-### 系统要求 (Requirements)
+- Next.js 15+
+- TypeScript
+- Tailwind CSS
+- Zustand (状态管理)
+- Recharts (数据可视化)
 
-- Node.js 18+
-- npm 或 yarn 或 pnpm
+## 开发环境设置
 
-### 安装步骤 (Installation)
-
-1. 克隆仓库 (Clone the repository)
+1. 克隆仓库
 
 ```bash
-git clone https://github.com/your-username/kawenda-tpms.git
+git clone https://github.com/yourusername/kawenda-tpms.git
 cd kawenda-tpms
 ```
 
-2. 安装依赖 (Install dependencies)
+2. 安装依赖
 
 ```bash
 npm install
-# 或
-yarn install
-# 或
-pnpm install
 ```
 
-3. 启动开发服务器 (Start development server)
+3. 启动开发服务器
 
 ```bash
 npm run dev
-# 或
-yarn dev
-# 或
-pnpm dev
 ```
 
-4. 在浏览器中打开 [http://localhost:3000](http://localhost:3000)
+4. 在浏览器中访问 [http://localhost:3000](http://localhost:3000)
 
-## 项目结构 (Project Structure)
+## 构建生产版本
+
+```bash
+npm run build
+```
+
+## 部署
+
+该项目可以部署到Vercel平台：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fkawenda-tpms)
+
+## 项目结构
 
 ```
 kawenda-tpms/
-├── public/             # 静态资源
+├── public/            # 静态资源
 ├── src/
-│   ├── app/            # Next.js App Router 页面
-│   ├── components/     # 可复用组件
-│   └── store/          # Zustand 状态管理
-├── next.config.ts      # Next.js 配置
-└── tailwind.config.js  # Tailwind CSS 配置
+│   ├── app/           # 页面组件
+│   ├── components/    # 可复用组件
+│   ├── store/         # Zustand状态管理
+│   └── styles/        # 全局样式
+├── .eslintrc.json     # ESLint配置
+├── next.config.ts     # Next.js配置
+├── package.json       # 项目依赖
+├── tailwind.config.js # Tailwind CSS配置
+└── tsconfig.json      # TypeScript配置
 ```
 
-## 部署 (Deployment)
+## 许可证
 
-本项目可以部署到 Vercel、Netlify 或其他支持 Next.js 的平台。
-
-This project can be deployed to Vercel, Netlify, or other platforms that support Next.js.
-
-```bash
-# 构建生产版本
-npm run build
-# 或
-yarn build
-# 或
-pnpm build
-```
-
-## 许可证 (License)
-
-[MIT](LICENSE)
+MIT

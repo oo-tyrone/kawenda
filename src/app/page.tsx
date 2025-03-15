@@ -1,13 +1,12 @@
 'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect } from "react";
-import useAppStore from "@/store/useAppStore";
+import { useEffect } from 'react';
+import Link from 'next/link';
+import useAppStore from '@/store/useAppStore';
 import useProductStore from "@/store/useProductStore";
-import ProductCard from "@/components/ProductCard";
-import TirePressureChart from "@/components/TirePressureChart";
-import Carousel from "@/components/Carousel";
+import ProductCard from '@/components/ProductCard';
+import TirePressureChart from '@/components/TirePressureChart';
+import Carousel from '@/components/Carousel';
 
 export default function Home() {
   const { locale } = useAppStore();

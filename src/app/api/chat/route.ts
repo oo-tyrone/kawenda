@@ -9,14 +9,24 @@ async function saveToDB(data: any) {
   return true;
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(request: Request) {
   try {
-    const data = await req.json();
-    await saveToDB(data);
-    return NextResponse.json({ success: true });
+    const body = await request.json();
+    const message: { name: string; email: string; message: string } = body.message;
+    
+    console.log('Received message:', message);
+    
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    return new Response(JSON.stringify({ success: true }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
-    console.error('Error processing chat request:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    console.error('Error processing chat message:', error);
+    return new Response(JSON.stringify({ success: false, error: 'Failed to process message' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }
 

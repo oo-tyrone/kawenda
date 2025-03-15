@@ -1,14 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import useAppStore from '@/store/useAppStore';
 
 const Header = () => {
   const { locale, setLocale, isMenuOpen, toggleMenu, closeMenu } = useAppStore();
-  const router = useRouter();
   
   const handleLocaleChange = (newLocale: string) => {
     setLocale(newLocale);
